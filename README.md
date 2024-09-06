@@ -20,7 +20,7 @@ pip install -r requirements.txt
 
 The TMKG knowledge graph we constructed comes frome multiple sources. These databases include SymMap, soFDA, STRING v11, KEGG, GO of gene ontology, the TCM books consist of “ChP 2020”, “100 Classic Famous Formulas”, “TCM Diagnostics”, “Treatise on Febrile Diseases”, “Formulas of TCM”, and “Internal and External Women and Children’s Diseases”.
 
-Using [OpenNE](https://github.com/thunlp/OpenNE) methods to learn the deep knowledge embedding of TMKG for herbs and targets. The output using LINE method is located at `/Knowledge_embedding`.
+Using [OpenNE](https://github.com/thunlp/OpenNE) methods to learn the deep knowledge embedding of TMKG for herbs and targets. The output using LINE method is located at `/Knowledge_embedding`. For example, each row of `herb_LINE.txt` or `gene_LINE.txt` represents a herb or gene's vector, and each line of their names can be found in `name2id`.
 
 ### Graph Representation
 
@@ -45,3 +45,8 @@ python test.py
 ```
 
 To adjust the dimension of the model, it is necessary to also modify the dimension of the pre-training embeddings in the Knowledge Embedding stage. This step ensures consistency of embedding dimensions within the framework, especially since the framework is not end-to-end.
+
+### Citing
+If you find HTINet2 useful for your research, please consider citing the following paper:
+
+Duan P, Yang K*, Su X, Fan S, Dong X, Zhang F, Li X, Xing X, Zhu Q, Yu J, Zhou X*. HTINet2: herb–target prediction via knowledge graph embedding and residual-like graph neural network[J]. Briefings in Bioinformatics, 2024, 25(5): bbae414.
